@@ -3,16 +3,15 @@ import { krijgFavorieten } from './favorites.js';
 const animeLijst = document.getElementById('anime-list');
 const animeDetails = document.getElementById('anime-details');
 
-export function haalPopulaireAnimeOpEnToon(wisselFavoriet, toonAnimeDetails, krijgFavorieten) {
+export async function haalPopulaireAnimeOpEnToon(wisselFavoriet, toonAnimeDetails, krijgFavorieten) {
   animeLijst.innerHTML = '<p>Loading...</p>';
-  fetch('https://api.jikan.moe/v4/top/anime?limit=24')
-    .then(function(res) { return res.json(); })
-    .then(function(data) {
-      toonAnime(data.data, wisselFavoriet, toonAnimeDetails, krijgFavorieten);
-    })
-    .catch(function() {
+  try {
+    const res = await fetch ('https://api.jikan.moe/v4/top/anime?limit=24')
+    const data = await res.json();
+    toonAnime(data.data, wisselFavoriet, toonAnimeDetails, krijgFavorieten);
+    } catch {
       animeLijst.innerHTML = '<p>Error loading data. Try again later.</p>';
-    });
+    }
 }
 
 export function haalAnimeOpGenreEnToon(genreId, wisselFavoriet, toonAnimeDetails, krijgFavorieten) {
@@ -73,6 +72,19 @@ export function toonAnime(animes, wisselFavoriet, toonAnimeDetails, krijgFavorie
       e.stopPropagation();
       toonAnimeDetails(anime.mal_id);
     });
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // animatie maar één keer per kaart
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.anime-card').forEach(card => {
+    observer.observe(card);
   });
 }
 
