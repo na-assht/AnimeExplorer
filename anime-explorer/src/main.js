@@ -1,6 +1,7 @@
 import { haalCategorieenOpEnToon } from './categories.js';
 import { haalPopulaireAnimeOpEnToon, haalAnimeOpGenreEnToon, zoekAnimeEnToon, toonAnimeDetails } from './anime.js';
 import { toonFavorieten, wisselFavoriet, krijgFavorieten } from './favorites.js';
+import './style.css';
 
 /* Linkerbalk */
 const zoekKnop = document.getElementById('searchBtn');
