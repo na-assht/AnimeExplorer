@@ -52,13 +52,13 @@ export function toonAnime(animes, wisselFavoriet, toonAnimeDetails, krijgFavorie
     });
     var animeCard = document.createElement('div');
     animeCard.classList.add('anime-card');
-    // HARTJE DIRECT NA DE AFBEELDING!
+    
     animeCard.innerHTML = `
       <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}">
+      <h4>${anime.title}</h4>
       <button class="fav-btn${isFav ? ' favorited' : ''}" title="Toggle Favorite" data-id="${anime.mal_id}">
         ${isFav ? '❤️' : '🤍'}
       </button>
-      <h4>${anime.title}</h4>
       <button class="details-btn" data-id="${anime.mal_id}">Details</button>
     `;
     animeLijst.appendChild(animeCard);
