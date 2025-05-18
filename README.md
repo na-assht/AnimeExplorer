@@ -72,12 +72,13 @@ anime.js, lijn 7
 
 
 /* Async & Await: */
-(Voeg toe als je een async functie gebruikt, bijvoorbeeld voor fetch: zie extra tip onderaan)
+async function haalPopulaireAnimeOpEnToon(...)
+anime.js, lijn 6
 
 
 /* Observer API: */
-(Voeg toe als je bijvoorbeeld IntersectionObserver gebruikt, bv. voor lazy loading afbeeldingen)
-
+new IntersectionObserver(...)
+anime.js, lijn 54 (na de forEach in toonAnime)
 
 
 
