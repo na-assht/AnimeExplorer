@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <aside id="zijbalk">
-      <div class="wolk-title">
-        <h2>Anime Explorer</h2>
-      </div>
-      <button id="homeKnop">Home</button>
-      <input type="text" id="zoeken" placeholder="Search for anime..." />
-      <button id="zoekKnop">Search</button>
-      <div id="categorieën">
-        <h3>Categories</h3>
-        <ul id="categorie-lijst"></ul>
-      </div>
-      <h3>Favorites</h3>
-      <button id="toonFavorietKnop">Show Favorites</button>
-      <div id="favoriet-lijst"></div>
-    </aside>
-    <main id="main-content">
-      <section id="anime-lijst"></section>
-    </main>
-    <div id="anime-details" class="verborgen"></div>
-    <script type="module" src="main.js"></script>
-  </body>
-  </html>
+  <aside id="sidebar">
+    <div class="cloud-title">
+      <h2>Anime Explorer</h2>
+    </div>
+    <button id="homeBtn">Home</button>
+    <input type="text" id="search" placeholder="Search for anime..." />
+    <button id="searchBtn">Search</button>
+    <div id="categories">
+      <h3>Categories</h3>
+      <ul id="category-list"></ul>
+    </div>
+    <h3>Favorites</h3>
+    <button id="showFavoritesBtn">Show Favorites</button>
+    <div id="favoritesList"></div>
+  </aside>
+  <main id="main-content">
+    <section id="anime-list"></section>
+  </main>
+  <div id="anime-details" class="hidden"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
