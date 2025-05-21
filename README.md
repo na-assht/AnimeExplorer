@@ -147,6 +147,10 @@ Regelmatig gecommit, met duidelijke commit messages.
 
 
 // Screenshots van de applicatie //
+- Homepagina: (./Homepagina.png)
+- Categorieën: (./Categories.png)
+- Favorieten: (./ShowFavorites.png)
+- Extra info van anime/Details: (./ExtraInfoVanAnime(Details).png)
 
 
 // Gebruikte bronnen //
