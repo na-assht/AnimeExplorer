@@ -13,23 +13,24 @@ DOM manipulatie ->
 
 /* Elementen selecteren: */
 const animeLijst = document.getElementById('anime-list');
-anime.js, lijn 2
+anime.js, lijn 3
 
 
 /* Elementen manipuleren: */
 animeLijst.innerHTML = ... in toonAnime()
-anime.js, lijn 26
+anime.js, lijn 25
 
 
 /* Events aan elementen koppelen: */
 animeCard.querySelector('.fav-btn').addEventListener(...)
-anime.js, lijn 37
+anime.js, lijn 65
 
 
 /* Modern JavaScript: */
 Gebruik van constanten:
 const animeLijst = ...
-anime.js, lijn 2
+const animeDetails = ...
+anime.js, lijn 3 en 4
 
 
 /* Template literals: */
@@ -37,38 +38,22 @@ animeCard.innerHTML = `
   <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}">
   ...
 `;
-anime.js, lijn 32
+anime.js, lijn 55
 
 
 /* Iteratie over arrays: */
 animes.forEach(function(anime) { ... })
-anime.js, lijn 29
-
-
-/* Array methodes: */
-.forEach, .some, .findIndex, .push, .splice
-favorites.js, lijnen 6, 10, 13
-
-
-/* Arrow functions: */
-Gebruikt in event listeners en array methodes, bijvoorbeeld:
-categorieLijst.innerHTML = ''; data.data.slice(0, 15).forEach(genre => { ... });
-categorieën.js
+anime.js, lijn 48
 
 
 /* Conditional (ternary) operator: */
 ${isFav ? '❤️' : '🤍'}
-anime.js, lijn 35
-
-
-/* Callback functions: */
-toonFavorieten(wisselFavoriet, toonAnimeDetails)
-favorites.js, lijn 22
+anime.js, lijn 59 
 
 
 /* Promises: */
-fetch(...).then(...).catch(...)
-anime.js, lijn 7
+fetch(...), .then(...), .catch(...)
+anime.js, lijn 19, 20, 24
 
 
 /* Async & Await: */
@@ -78,7 +63,23 @@ anime.js, lijn 6
 
 /* Observer API: */
 new IntersectionObserver(...)
-anime.js, lijn 54 (na de forEach in toonAnime)
+anime.js, lijn 77 (na de forEach in toonAnime)
+
+
+/* Array methodes: */
+.findIndex, .push, .splice, .forEach
+favorites.js, lijnen 9, 13, 20, 34
+
+
+/* Callback functions: */
+toonFavorietenHoofd(wisselFavoriet, toonAnimeDetails)
+favorites.js, lijn 60
+
+
+/* Arrow functions: */
+Gebruikt in event listeners en array methodes, bijvoorbeeld:
+categorieLijst.innerHTML = ''; data.data.slice(0, 15).forEach(genre => { ... });
+categorieën.js, lijn 6
 
 
 
@@ -86,23 +87,23 @@ Data & API ->
 
 /* Fetch om data op te halen: */
 fetch('https://api.jikan.moe/v4/top/anime?limit=24')
-anime.js, lijn 7
+anime.js, lijn 9
 
 /* JSON manipuleren en weergeven: */
-res.json().then(function(data) { ... })
-anime.js, lijn 8
+res.json(), .then(function(data) { ... })
+anime.js, lijnen 10, 21 
 
 
 
 Opslag & validatie ->
 
 /* Formulier validatie: */
-if (zoekterm) { ... } controleert of het zoekveld niet leeg is
-main.js, lijn 8
+if (zoekterm) { ... } 
+main.js, lijn 25
 
 /* Gebruik van LocalStorage: *:
 localStorage.setItem('favorieten', JSON.stringify(favorieten));
-favorites.js, lijn 18
+favorites.js, lijn 22
 
 
 
@@ -112,22 +113,22 @@ Styling & layout ->
 Zie index.html met <aside>, <main>, en CSS Grid in #anime-list
 index.html, style.css
 
-/* Basis CSS: */
-Zie style.css voor kleuren, grid, knoppen, enz.
-
 /* Gebruiksvriendelijke elementen: */
 Hartje voor favorieten, details-knop, duidelijke foutmeldingen
 anime.js, favorites.js, style.css
+
+/* Basis CSS: */
+Zie style.css voor kleuren, grid, knoppen, enz.
 
 
 
 Tooling & structuur ->
 
 /* Project opgezet met Vite: */
-Zie vite.config.js, package.json
+Zie package.json
 
 /* Correcte folderstructuur: */
-Zie bovenstaand structuurvoorbeeld
+De mappen en bestanden zijn logisch gestructureerd voor overzicht
 
 /* GitHub repository: */
 https://github.com/na-assht/AnimeExplorer 
@@ -157,5 +158,4 @@ https://jsfiddle.net/
 https://stackedit.io/app#
 http://codetester.io/
 https://www.google.com/?hl=nl 
-
 

@@ -67,9 +67,9 @@ export function toonFavorietenHoofd(wisselFavoriet, toonAnimeDetails) {
   }
   favorieten.forEach(function(anime) {
     var animeCard = document.createElement('div');
-    animeCard.classList.add('anime-card');
+    animeCard.classList.add('anime-card', 'visible'); // direct zichtbaar
     animeCard.innerHTML = `
-      <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}">
+      <img src="${anime.images && anime.images.jpg && anime.images.jpg.large_image_url ? anime.images.jpg.large_image_url : 'https://via.placeholder.com/150x210?text=No+Image'}" alt="${anime.title}">
       <button class="fav-btn favorited" title="Toggle Favorite" data-id="${anime.mal_id}">❤️</button>
       <h4>${anime.title}</h4>
       <button class="details-btn" data-id="${anime.mal_id}">Details</button>
