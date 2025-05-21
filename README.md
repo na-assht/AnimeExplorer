@@ -3,8 +3,10 @@ Anime Explorer is een webapplicatie waarmee je populaire anime kunt zoeken, filt
 Gebouwd met Vite, gescheiden HTML, CSS en JS.
 
 
+
 // Gebruikte API //
 https://api.jikan.moe/v4/anime/{id}/full
+
 
 
 // Implementatie van elke technisch vereiste //
@@ -155,7 +157,6 @@ Regelmatig gecommit, met duidelijke commit messages.
 
 
 // Gebruikte bronnen //
-https://www.perplexity.ai/
 https://chatgpt.com/
 https://paiza.io/en
 https://jsfiddle.net/
