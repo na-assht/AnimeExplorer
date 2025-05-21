@@ -1,15 +1,16 @@
-// Projectbeschrijving //
+1. Projectbeschrijving 
+
 Anime Explorer is een webapplicatie waarmee je populaire anime kunt zoeken, filteren op genre, favorieten kunt opslaan en info (details) van anime kunt bekijken. De app gebruikt de Jikan API en slaat favorieten op in LocalStorage.
 Gebouwd met Vite, gescheiden HTML, CSS en JS.
 
 
 
-// Gebruikte API //
+2. Gebruikte API 
 https://api.jikan.moe/v4/anime/{id}/full
 
 
 
-// Implementatie van elke technisch vereiste //
+3. Implementatie van elke technisch vereiste
 
 DOM manipulatie ->
 
@@ -137,8 +138,7 @@ https://github.com/na-assht/AnimeExplorer
 Regelmatig gecommit, met duidelijke commit messages.
 
 
-
-// Installatiehandleiding //
+4. Installatiehandleiding 
 
 1. Ga naar de projectmap:  
    `cd anime-explorer`
@@ -149,14 +149,16 @@ Regelmatig gecommit, met duidelijke commit messages.
 4. Open [http://localhost:5173](http://localhost:5173) in je browser.
 
 
-// Screenshots van de applicatie //
+5. Screenshots van de applicatie 
+
 - Homepagina: ![Homepagina](./Homepagina.png)
 - Categorieën: ![Categorieën](./Categories.png)
 - Favorieten: ![Favorieten](./ShowFavorites.png)
 - Extra info van anime/Details: ![Details](./ExtraInfoVanAnime(Details).png)
 
 
-// Gebruikte bronnen //
+6. Gebruikte bronnen
+
 https://chatgpt.com/
 https://paiza.io/en
 https://jsfiddle.net/
