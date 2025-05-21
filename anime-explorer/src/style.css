@@ -202,9 +202,9 @@ button:hover {
   color: var(--favoriet);
   transition: color .2s;
   padding: 0;
-  margin: 3px 0 0 0;         /* ruimte boven het hartje */
+  margin: 3px 0 0 0;        
   align-self: center;          /* centreer het hartje onder de titel */
-  position: static;              /* niet meer absoluut */
+  position: static;             
   display: block;
 }
 .anime-card .fav-btn.favorited { color: #e63946; }
@@ -255,9 +255,14 @@ button:hover {
 /* Details */
 #anime-details {
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh;
   background: rgba(0,0,0,0.75);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   z-index: 1000;
 }
 #anime-details.hidden { display: none; }
@@ -274,8 +279,10 @@ button:hover {
   animation: popupIn .25s ease;
 }
 @keyframes popupIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  from { transform: scale(0.8); 
+    opacity: 0; }
+  to   { transform: scale(1); 
+    opacity: 1; }
 }
 #close-details {
   position: absolute;
@@ -309,7 +316,7 @@ button:hover {
   font-size: 0.95rem;          /* Grote link */
 }
 
-/* Mobiel */
+/* Responsiviteit */
 @media (max-width: 800px) {
   #sidebar {
     position: static;

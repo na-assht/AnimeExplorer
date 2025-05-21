@@ -1,6 +1,6 @@
 import { haalCategorieenOpEnToon } from './categories.js';
 import { haalPopulaireAnimeOpEnToon, haalAnimeOpGenreEnToon, zoekAnimeEnToon, toonAnimeDetails } from './anime.js';
-import { toonFavorieten, wisselFavoriet, krijgFavorieten } from './favorites.js';
+import { toonFavorietenZijbalk, toonFavorietenHoofd, wisselFavoriet, krijgFavorieten } from './favorites.js';
 import './style.css';
 
 /* Linkerbalk */
@@ -14,8 +14,9 @@ let favorietenZichtbaar = false;
 
 function wisselFavorietEnVervers(anime) {
   wisselFavoriet(anime);
+  toonFavorietenZijbalk(wisselFavorietEnVervers, toonAnimeDetails);
   if (favorietenZichtbaar) {
-    toonFavorieten(wisselFavorietEnVervers, toonAnimeDetails);
+    toonFavorietenHoofd(wisselFavorietEnVervers, toonAnimeDetails);
   }
 }
 
@@ -42,7 +43,7 @@ homeKnop.addEventListener('click', function() {
 
 favorietenKnop.addEventListener('click', function() {
   favorietenZichtbaar = true;
-  toonFavorieten(wisselFavorietEnVervers, toonAnimeDetails);
+  toonFavorietenHoofd(wisselFavorietEnVervers, toonAnimeDetails);
 });
 
 animeDetails.addEventListener('click', function(e) {
@@ -63,4 +64,4 @@ haalCategorieenOpEnToon(function(genreId) {
   favorietenZichtbaar = false;
 });
 haalPopulaireAnimeOpEnToon(wisselFavorietEnVervers, toonAnimeDetails, krijgFavorieten);
-toonFavorieten(wisselFavorietEnVervers, toonAnimeDetails);
+toonFavorietenZijbalk(wisselFavorietEnVervers, toonAnimeDetails);

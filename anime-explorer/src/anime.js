@@ -78,7 +78,7 @@ export function toonAnime(animes, wisselFavoriet, toonAnimeDetails, krijgFavorie
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        obs.unobserve(entry.target); // animatie maar één keer per kaart
+        obs.unobserve(entry.target);              /* animatie maar één keer per kaart */
       }
     });
   }, { threshold: 0.3 });

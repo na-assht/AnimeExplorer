@@ -137,15 +137,13 @@ Regelmatig gecommit, met duidelijke commit messages.
 
 // Installatiehandleiding //
 
-1. Clone deze repository:  
-   `git clone <jouw-repo-url>`
-2. Ga naar de projectmap:  
+1. Ga naar de projectmap:  
    `cd anime-explorer`
-3. Installeer de dependencies:  
+2. Installeer de dependencies:  
    `npm install`
-4. Start de ontwikkelserver:  
+3. Start de ontwikkelserver:  
    `npm run dev`
-5. Open [http://localhost:5173](http://localhost:5173) in je browser.
+4. Open [http://localhost:5173](http://localhost:5173) in je browser.
 
 
 // Screenshots van de applicatie //
@@ -158,5 +156,6 @@ https://paiza.io/en
 https://jsfiddle.net/
 https://stackedit.io/app#
 http://codetester.io/
+https://www.google.com/?hl=nl 
 
 
