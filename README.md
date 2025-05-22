@@ -153,20 +153,20 @@ npm run dev
 
 🖼️ Screenshots van de applicatie
 Homepagina:
-![Homepagina](screenshot/Homepagina.png)
+![Homepagina](Screenshots/Homepagina.png)
 
 Categorieën:
-![Categorieën](screenshot/Categories.png)
+![Categorieën](Screenshots/Categories.png)
 
 Favorieten:
-![Favorieten](screenshot/ShowFavorites.png)
+![Favorieten](Screenshots/ShowFavorites.png)
 
 Extra info van anime/Details:
-![Details](screenshot/ExtraInfoVanAnime(Details).png)
+![Details](Screenshots/ExtraInfoVanAnime(Details).png)
 
 Responsiviteit:
-![Responsiviteit](screenshot/Responsiviteit1.png)
-![Responsiviteit](screenshot/Responsiviteit2.png)
+![Responsiviteit](Screenshots/Responsiviteit1.png)
+![Responsiviteit](Screenshots/Responsiviteit2.png)
 
 
 
