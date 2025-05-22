@@ -164,6 +164,10 @@ Favorieten:
 Extra info van anime/Details:
 ![Details](./ExtraInfoVanAnime(Details).png)
 
+Responsiviteit:
+![Responsiviteit](./Responsiviteit1.png)
+![Responsiviteit](./Responsiviteit2.png)
+
 
 
 Gebruikte bronnen
