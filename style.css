@@ -1,0 +1,334 @@
+/* Kleuren */
+:root {
+  --achtergrond: #F0F4F8;
+  --zijbalk: #ffe5ec;
+  --titel-achtergrond: #fff1fa;
+  --categorie: #ffd6ec;
+  --categorie-hover: #ffe5f1;
+  --primaire-kleur: #ffafcc;
+  --secundaire-kleur: #a2d2ff;
+  --favoriet: #f08080;
+  --favoriet-hover: #ffb4b4;
+  --tekst-donker: #22223b;
+  --tekst-licht: #fff;
+}
+
+/* Algemene opmaak */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--achtergrond);
+  margin: 0;
+  color: var(--tekst-donker);
+}
+
+/* Zijbalk links */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--zijbalk);
+  color: var(--tekst-donker);
+  padding: 24px 16px 16px 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-right: 2px solid var(--zijbalk);
+  z-index: 10;
+}
+
+/* Titel in een wolkje */
+.cloud-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.cloud-title h2 {
+  background: var(--titel-achtergrond);
+  border-radius: 50px;
+  box-shadow: 0 4px 24px #ffd6ec99;
+  padding: 18px 40px; 
+  font-size: 28px;
+  font-weight: bold;
+  color: #b5838d;
+  margin: 0;
+  border: 2px solid var(--categorie);
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Knoppen */
+button {
+  background-color: var(--primaire-kleur);
+  border: none;
+  padding: 10px;
+  color: var(--tekst-donker);
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+button:hover {
+  background-color: var(--secundaire-kleur);
+  color: var(--tekst-donker);
+}
+#homeBtn {
+  background-color: var(--secundaire-kleur);
+  margin-bottom: 14px;
+  font-weight: bold;
+}
+
+/* Zoekveld */
+#search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid var(--categorie);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--tekst-donker);
+}
+
+/* Categorieën */
+#categories h3, #sidebar h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+#categories ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#categories li {
+  margin-bottom: 8px;
+}
+.category-btn {
+  width: 100%;
+  background: var(--categorie);
+  color: var(--tekst-donker);
+  border: 1px solid var(--categorie);
+  padding: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+}
+.category-btn:hover, .category-btn.active {
+  background: var(--categorie-hover);
+  color: #b5838d;
+  border: 1px solid var(--primaire-kleur);
+}
+
+/* Hoofdinhoud */
+#main-content {
+  margin-left: 270px;
+  padding: 36px 3vw 24px 3vw;
+  min-height: 100vh;
+}
+
+/* Anime lijst */
+#anime-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+/* Kaartje voor anime */
+.anime-card {
+  background: #fff;
+  color: var(--tekst-donker);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #ffd6ec55;
+  transition: box-shadow .22s, transform .22s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6px;
+  height: 300px;
+  justify-content: flex-start;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.anime-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anime-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.anime-card h4 {
+  font-size: 15px;
+  margin: 12px 0 4px 0;
+  text-align: center;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anime-card .fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 7px; right: 10px;
+  color: var(--favoriet);
+  transition: color .2s;
+  padding: 0;
+  margin: 3px 0 0 0;        
+  align-self: center;          /* centreer het hartje onder de titel */
+  position: static;             
+  display: block;
+}
+.anime-card .fav-btn.favorited { color: #e63946; }
+.anime-card .fav-btn:hover { color: var(--favoriet-hover); }
+.anime-card .details-btn {
+  margin-top: auto;
+  margin-bottom: 6px;
+  background: var(--secundaire-kleur);
+  color: var(--tekst-donker);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 0.97rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+.anime-card .details-btn:hover { background: var(--primaire-kleur); }
+.anime-card:hover {
+  box-shadow: 0 12px 32px 0 #a2d2ff55, 0 2px 8px #ffd6ec55;
+  transform: translateY(-10px) scale(1.04);
+  z-index: 2;
+}
+
+/* Favorieten in de zijbalk */
+#favoritesList {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#favoritesList .anime-card {
+  width: 90px;
+  min-width: 90px;
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 4px 0 8px 0;
+  height: 140px;
+  min-height: 140px;
+}
+#favoritesList .anime-card img {
+  height: 70px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Details */
+#anime-details {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh;
+  background: rgba(0,0,0,0.75);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  z-index: 1000;
+}
+#anime-details.hidden { display: none; }
+.details-popup {
+  position: relative;
+  background: #fff;
+  color: var(--tekst-donker);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;   
+  border-radius: 14px;
+  max-width: 400px;                 /* Grote kader */
+  width: 98vw;
+  box-shadow: 0 8px 32px #ffd6ec99;
+  text-align: center;
+  animation: popupIn .25s ease;
+}
+@keyframes popupIn {
+  from { transform: scale(0.8); 
+    opacity: 0; }
+  to   { transform: scale(1); 
+    opacity: 1; }
+}
+#close-details {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  font-size: 1.8rem;       /* Grote kruisje */
+  cursor: pointer;
+  color: #e63946;
+  z-index: 10;
+}
+.details-popup img {
+  width: 90%;
+  max-width: 140px;           /* Grote afbeelding */
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.details-popup h2 {
+  margin: 14px 0 16px 0;
+  font-size: 1.1rem;      /* Grote titel */ 
+}
+.details-popup p {
+  font-size: 1rem;    /* Grote tekst */
+  margin-bottom: 14px;
+}
+.details-popup a {
+  color: var(--primaire-kleur);
+  text-decoration: underline;
+  font-size: 0.95rem;          /* Grote link */
+}
+
+/* Responsiviteit */
+@media (max-width: 800px) {
+  #sidebar {
+    position: static;
+    width: 100vw;
+    height: auto;
+    padding: 16px 5vw;
+    border-right: none;
+    border-bottom: 2px solid var(--categorie);
+  }
+  #main-content {
+    margin-left: 0;
+    padding: 24px 2vw;
+  }
+  #anime-list {
+    gap: 1rem;
+  }
+}
