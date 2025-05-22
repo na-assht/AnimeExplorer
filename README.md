@@ -132,7 +132,13 @@ Regelmatig gecommit, met duidelijke commit messages.
 
 🛠️ Installatiehandleiding
 1.Ga naar de projectmap:
-cd AnimeExplorer
+Optie 1:
+ cd "Web Advanced Project\AnimeExplorer.web" 
+ = Dit gebruik je als je al in de map zit.
+ 
+Optie 2:
+cd "C:\Users\Nehli\Documents\Web Advanced Project\AnimeExplorer.web" 
+= Dit werkt altijd, ongeacht waar je terminal zich bevindt. Het is het volledige pad.
 
 2.Installeer de dependencies:
 npm install
@@ -140,7 +146,7 @@ npm install
 3.Start de ontwikkelserver:
 npm run dev
 
-4.Open http://localhost:5173 in je browser.
+4.Open [http://localhost:5173](http://localhost:5173) in je browser.
 
 
 
